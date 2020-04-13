@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="module_list">
+        <item>MarqueeView</item>
+        <item>Phoenix</item>
+        <item>MoveAndSwipeRecyclerView</item>
+        <item>Indicator</item>
+        <item>Xfermode</item>
+        <item>TreeListView</item>
+    </string-array>
+
+</resources>

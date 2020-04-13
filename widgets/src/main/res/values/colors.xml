@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#4f000000</color>
+
+    <color name="white">#FFFFFF</color>  <!-- 白色 -->
+    <color name="yellow">#FFFF00</color> <!-- 黄色 -->
+    <color name="gold">#FFD700</color>   <!-- 金色 -->
+    <color name="orange">#FFA500</color> <!-- 橙色 -->
+    <color name="red">#ff5555</color>    <!-- 红色 -->
+    <color name="gray">#808080</color>   <!-- 灰色 -->
+    <color name="green">#008000</color>  <!-- 绿色 -->
+    <color name="blue">#455ede</color>   <!-- 蓝色 -->
+    <color name="black">#000000</color>  <!-- 黑色 -->
+
+    <color name="saffron">#F4B63E</color>
+    <color name="eggplant">#663D4E</color>
+    <color name="sienna">#EB6460</color>
+
+    <color name="gray_900">#212121</color>
+
+    <color name="lightPrimary_1">#cfebf0</color>
+    <color name="lightPrimary_2">#b6e3e7</color>
+    <color name="lightPrimary_3">#96d6db</color>
+    <color name="lightPrimary_4">#7ac7d3</color>
+    <color name="lightPrimary_5">#75becb</color>
+
+    <color name="darkPrimary_1">#4b5073</color>
+    <color name="darkPrimary_2">#343851</color>
+    <color name="darkPrimary_3">#2c2f43</color>
+    <color name="darkPrimary_4">#20222f</color>
+    <color name="darkPrimary_5">#1a1b22</color>
+
+    <color name="colorLine">#f1f1f1</color>
+    <color name="colorTextContent">#757575</color>
+
+    <string-array name="color_choices">
+        <item>#e50834</item>
+        <item>#e91e63</item>
+        <item>#9c27b0</item>
+        <item>#673ab7</item>
+        <item>#3f51b5</item>
+        <item>#2196f3</item>
+        <item>#03a9f4</item>
+        <item>#00bcd4</item>
+        <item>#009688</item>
+        <item>#4caf50</item>
+        <item>#8bc34a</item>
+        <item>#cddc39</item>
+        <item>#ffeb3b</item>
+        <item>#ffc107</item>
+        <item>#ff9800</item>
+        <item>#ff5722</item>
+        <item>#795548</item>
+        <item>#9e9e9e</item>
+        <item>#607d8b</item>
+    </string-array>
+
+</resources>

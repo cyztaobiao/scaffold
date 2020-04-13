@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidViewCode</string>
+
+    <string name="dummy_content">dummy_content</string>
+
+    <string name="marquee_text">marquee_text</string>
+</resources>

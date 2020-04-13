@@ -1,0 +1,1 @@
+## android开发的脚手架 包括用于新项目搭建的starter，包含UI组件的widgets，功能示范的样例代码demos
