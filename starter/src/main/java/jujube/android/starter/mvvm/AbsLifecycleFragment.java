@@ -15,12 +15,17 @@ public abstract class AbsLifecycleFragment<T extends AbsViewModel> extends Fragm
 
     protected T mViewModel;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mViewModel = createViewModel();
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         registerComponent();
         if (mRootView == null) {
-            mViewModel = createViewModel();
             mRootView = inflater.inflate(provideLayoutId(), container, false);
             initView();
             dataObserve();

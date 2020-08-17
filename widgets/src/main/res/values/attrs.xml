@@ -82,4 +82,16 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="SimpleCrossView">
+        <attr name="crossColor" format="color|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="PhotoLayout">
+        <attr name="max_items" format="integer"/>
+        <attr name="type" format="enum">
+            <enum name="photo" value="0" />
+            <enum name="video" value="1"/>
+        </attr>
+    </declare-styleable>
+
 </resources>

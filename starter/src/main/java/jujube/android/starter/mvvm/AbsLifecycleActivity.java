@@ -12,9 +12,9 @@ public abstract class AbsLifecycleActivity<T extends AbsViewModel> extends AppCo
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mViewModel = createViewModel();
         activityConfig();
 
-        mViewModel = createViewModel();
         initView();
         dataObserve();
     }

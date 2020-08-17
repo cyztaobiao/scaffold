@@ -45,7 +45,11 @@ public class FilterAdapter<T> extends RecyclerThrowableAdapter {
     public void select(int selectPos) {
         this.selectPos = selectPos;
         if (itemClickListener != null) {
-            itemClickListener.onItemClick(data.get(selectPos));
+            if (includeAll && selectPos == 0) {
+                itemClickListener.onItemClick(null);
+            }else {
+                itemClickListener.onItemClick(data.get(includeAll ? selectPos - 1 : selectPos));
+            }
         }
         notifyDataSetChanged();
     }
@@ -57,12 +61,12 @@ public class FilterAdapter<T> extends RecyclerThrowableAdapter {
 
     @Override
     protected void bind(@NonNull ViewHolder holder, final int position) {
-        final T item = data.get(position);
         TextView filterTextView = (TextView) holder.itemView;
 
         if (includeAll && position == 0) {
             filterTextView.setText("全部");
         }else {
+            final T item = data.get(includeAll ? position - 1 : position);
             filterTextView.setText(item.toString());
         }
 

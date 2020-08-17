@@ -15,10 +15,9 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
-public class FileUtils {
+public class IOUtils {
 
-    private static int sBufferSize = 524288;
-
+    private static int sBufferSize = 2048;
 
     public static String getExtension(String fileName) {
         String encoded;
@@ -31,8 +30,29 @@ public class FileUtils {
     }
 
     /**
+     * 先根遍历序递归删除文件夹
+     * @param dirFile 要被删除的文件或者目录
+     * @return 删除成功返回true, 否则返回false
+     */
+    public static boolean deleteFile(File dirFile) {
+        // 如果dir对应的文件不存在，则退出
+        if (!dirFile.exists()) {
+            return false;
+        }
+
+        if (dirFile.isFile()) {
+            return dirFile.delete();
+        } else {
+            for (File file : dirFile.listFiles()) {
+                deleteFile(file);
+            }
+        }
+
+        return dirFile.delete();
+    }
+
+    /**
      * 将字符串写入文件
-     *
      * @param file    文件
      * @param content 写入内容
      * @return {@code true}: 写入成功<br>{@code false}: 写入失败
@@ -43,7 +63,6 @@ public class FileUtils {
 
     /**
      * 将字符串写入文件
-     *
      * @param file    文件
      * @param content 写入内容
      * @param append  是否追加在文件末
@@ -86,8 +105,7 @@ public class FileUtils {
     }
 
     /**
-     * Return the bytes in file by stream.
-     *
+     * 读取文件流
      * @param file The file.
      * @return the bytes in file
      */
@@ -136,26 +154,4 @@ public class FileUtils {
         }
     }
 
-    /**
-     * 先根遍历序递归删除文件夹
-     *
-     * @param dirFile 要被删除的文件或者目录
-     * @return 删除成功返回true, 否则返回false
-     */
-    public static boolean deleteFile(File dirFile) {
-        // 如果dir对应的文件不存在，则退出
-        if (!dirFile.exists()) {
-            return false;
-        }
-
-        if (dirFile.isFile()) {
-            return dirFile.delete();
-        } else {
-            for (File file : dirFile.listFiles()) {
-                deleteFile(file);
-            }
-        }
-
-        return dirFile.delete();
-    }
 }

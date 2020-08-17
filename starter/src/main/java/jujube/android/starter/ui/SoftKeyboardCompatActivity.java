@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 import jujube.android.starter.mvvm.AbsLifecycleActivity;
 import jujube.android.starter.mvvm.AbsViewModel;
-import jujube.android.starter.utils.SystemUtils;
+import jujube.android.starter.utils.ContextUtils;
 
 public abstract class SoftKeyboardCompatActivity<T extends AbsViewModel> extends AbsLifecycleActivity<T> {
 
@@ -17,7 +17,7 @@ public abstract class SoftKeyboardCompatActivity<T extends AbsViewModel> extends
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             View v = getCurrentFocus();
             if (isShouldHideInput(v, ev)) {
-                SystemUtils.hideSoftInput(this);
+                ContextUtils.hideSoftInput(this);
             }
             return super.dispatchTouchEvent(ev);
         }

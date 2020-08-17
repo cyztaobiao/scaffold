@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jujube.android.widgets.starter.SquareItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:background="@drawable/bg_item_preview">
+    
+    <jujube.android.widgets.starter.SimpleCrossView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:crossColor="#909090"/>
+
+</jujube.android.widgets.starter.SquareItemLayout>

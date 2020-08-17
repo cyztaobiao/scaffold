@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jujube.android.widgets.starter.SquareItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/preview"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:padding="2dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_cancel"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/white"
+        android:alpha=".8"
+        android:tint="#212121"/>
+
+</jujube.android.widgets.starter.SquareItemLayout>

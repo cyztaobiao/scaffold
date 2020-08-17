@@ -20,10 +20,9 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class SystemUtils {
+public class ContextUtils {
 
     public static int getStatusBarHeight(Context context) {
-        // 获得状态栏高度
         int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
         return context.getResources().getDimensionPixelSize(resourceId);
     }
@@ -76,7 +75,7 @@ public class SystemUtils {
         return typedArray.getDrawable(0);
     }
 
-    public static Drawable getSelectableItemBackgroundBodrderless(Activity activity) {
+    public static Drawable getSelectableItemBackgroundBorderless(Activity activity) {
         TypedValue typedValue = new TypedValue();
         Resources.Theme theme = activity.getTheme();
         theme.resolveAttribute(android.R.attr.selectableItemBackgroundBorderless, typedValue, true);
