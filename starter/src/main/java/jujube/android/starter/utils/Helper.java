@@ -1,4 +1,4 @@
-package jujube.android.starter.helper;
+package jujube.android.starter.utils;
 
 import java.util.UUID;
 
